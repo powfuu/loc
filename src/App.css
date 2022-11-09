@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    transition:.2s all ease-in-out;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+.active{
+    border:2px solid #D5C396;
+}
+.circle-bg{
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+}
+.hextec-button {
+    z-index:3;
+    margin-left:-15px;
+    position:absolute;
+    bottom:0;
+    margin-bottom:95px;
+  min-width: 220px;
+  height: 32px;
+  padding: 0px;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hextec-button.confirm-disabled .confirm-button {
+  cursor: default !important;
+}
+.hextec-button .confirm-button {
+  height: 57px;
+  border: 0px solid #05252F;
+  flex-grow: 1;
+    transition:1s;
+}
+.hextec-button .confirm-button:hover {
+  cursor: pointer;
+}
+.hextec-button .confirm-button:hover .button--inner-border {
+  background: #09C2B4;
+}
+.hextec-button .confirm-button:hover .button--inner-border .button--inner {
+  background: linear-gradient(to bottom, #1E2328 0, #11384C 100%);
+}
+.hextec-button .confirm-button:hover  {
+  border-color: #09C2B4;
+}
+.hextec-button .confirm-button:active .button--inner-border {
+  background: #014d6d;
+}
+.hextec-button .confirm-button:active .button--inner-border .button--inner {
+  background: linear-gradient(to bottom, #1E2328 0, #1E2328 100%);
+}
+.hextec-button .confirm-button:active .button--inner-border .button--inner .button--text {
+  color: #005a82;
+}
+.hextec-button .confirm-button:active  {
+  border-color: #014d6d;
+}
+.hextec-button .confirm-button .button--inner-border {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  padding-left: 3px;
+  background: #07899c;
+  -webkit-clip-path: polygon(calc(100% - 18px) 0, 100% 50%, 100% 50%, calc(100% - 18px) 100%, 0 100%, 0 0);
+          clip-path: polygon(calc(100% - 18px) 0, 100% 50%, 100% 50%, calc(100% - 18px) 100%, 0 100%, 0 0);
+          border-radius:6px;
+  position: relative;
+}
+.hextec-button .confirm-button .button--inner {
+  width: 100%;
+  height: 100%;
+  padding-top:10.5px;
+  background: linear-gradient(to bottom, #1E2328 0, #1E2328 100%);
+  -webkit-clip-path: polygon(calc(100% - 17px) 0, calc(100% - 1px) 50%, calc(100% - 1px) 50%, calc(100% - 17px) 100%, 0 100%, 0 0);
+          clip-path: polygon(calc(100% - 17px) 0, calc(100% - 1px) 50%, calc(100% - 1px) 50%, calc(100% - 17px) 100%, 0 100%, 0 0);
+  line-height: 28px;
+}
+.hextec-button .confirm-button .button--inner .button--text {
+  margin-left: 67px;
+  text-align:center;
+  color: #A3c7C7;
+  font-size:18px;
+  font-family: "Eczar", serif;
+  text-transform: uppercase;
+}
+.icon-input {
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 300px;
+    margin-top:8px;
+    margin-left:80px;
+}
+    .icon-input__text-field{
+      width: 100%;
+      padding: 8px 30px 8px 43px;
+      background:#111211;
+      outline:none;
+      border:1px solid #444;
+      font-size:15.5px;
+      border-radius:4px;
+      color:#888;
+    }
+    .icon-input__text-field::placeholder{
+      color:#444;
+    }
+    .icon-input i{
+        position: absolute;
+        top: 50%;
+        left:0;
+        top:0;
+        margin-left:13px;
+        margin-top:18px;
+        transform: translateY(-50%) scale(.83);
+        border-color:#666;
+    }
+    .gg-search::after{
+        background:#666;
+    }
+
+    #assasin-tag,#fighter-tag,#mage-tag,#marksman-tag,#tank-tag{
+        padding:8px;
+        background:rgba(0,0,0,.3);
+        border-radius:100%;
+    }
