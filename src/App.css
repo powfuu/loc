@@ -129,3 +129,27 @@
         background:rgba(0,0,0,.3);
         border-radius:100%;
     }
+          @media screen and (max-height: 850px) {
+            .hextec-button{
+                margin-bottom:80px;
+            } 
+          }
+          @media screen and (max-width: 700px) {
+            .hextec-button .confirm-button{
+                height:42px;
+            }
+            .hextec-button .confirm-button .button--inner .button--text{
+                font-size:14.8px;
+                margin-left:57px;
+            }
+            .hextec-button .confirm-button .button--inner{
+                padding-top:3px;
+            }
+            .hextec-button .confirm-button .button--inner-border{
+                width:83%;
+            }
+            .hextec-button{
+                margin-left:35px;
+                height:20px;
+            }
+          }
