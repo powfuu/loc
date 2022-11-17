@@ -30,9 +30,9 @@ function App() {
     const selectChampion = () =>{
         setInSelection(true)
         champSelectionDiv.current.style.opacity='0'
-        alert('League of Champions is under beta, it may contains errors and does not have enough info yet!')
         setTimeout(() => {
            champSelectionDiv.current.style.display='none' 
+        alert('League of Champions is under beta, it may contains errors and does not have enough info yet!')
         }, 600);
         for(let i = 0; i<=10; i++){
 fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChampion}_${i}.jpg`, { method: 'HEAD' })
@@ -70,14 +70,15 @@ fetch(`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${currentChamp
               inSelection ? 
                   <img src={arrow} className='absolute top-0 left-0 h-[38px] w-[52px] cursor-pointer mt-7 ml-5' onClick={()=>{
                       setInSelection(false)
-                      setCurrentSkin('')
+                      setCurrentSkin(0)
                       setCurrentChampion('')
+                      setSkins([])
+                      champSelectionDiv.current.style.display='block' 
                       champSelectionDiv.current.style.opacity='1'
           }}/>
               : null 
           }
           <div className='absolute flex z-2 bottom-5 w-[100vw] justify-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="dodgerblue" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" /> </svg>
               <div className='w-[60vw] flex flex-wrap h-[150px] pb-5 gap-4 overflow-y-scroll'>
               {skins.map((asset)=>{
                 return(
